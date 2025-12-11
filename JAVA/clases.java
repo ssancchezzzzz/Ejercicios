@@ -4,24 +4,60 @@
 // Completa lo que falta.
 //
 
-class Coche {
+public class Coche {
+
     private String marca;
     private String modelo;
     private int velocidad;
 
-    // Constructor COMPLETAR
-    
-    
-    // Método acelerar (suma +10) COMPLETAR
-   
+    public Coche(String marca, String modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.velocidad = 0;
+    }
 
-    // Método frenar (resta -10 y nunca menor que 0) COMPLETAR
-   
+    public String getMarca() {
+        return marca;
+    }
 
-    // Método mostrarDatos COMPLETAR
-    
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
 
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getVelocidad() {
+        return velocidad;
+    }
+
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    public void acelerar() {
+        setVelocidad(getVelocidad() + 10);
+    }
+
+    public void frenar() {
+        setVelocidad(getVelocidad() - 10);
+        if (this.velocidad < 0) {
+            this.velocidad = 0;
+        }
+    }
+
+    public void muestraDatos() {
+        System.out.println("Marca: " + this.marca);
+        System.out.println("Modelo: " + this.modelo);
+        System.out.println("Velocidad: " + this.velocidad + " Km/h");
+    }
 }
+
 
 
 
